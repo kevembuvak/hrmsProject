@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface JobPositionService {
     List<JobPosition> getAll();
+    boolean add(JobPosition position);
 }

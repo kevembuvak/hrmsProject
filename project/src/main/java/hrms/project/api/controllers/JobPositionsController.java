@@ -24,4 +24,12 @@ public class JobPositionsController {
     public List<JobPosition> getAll(){
         return jobPositionService.getAll();
     }
+
+    @GetMapping("/add")
+    public boolean add() {
+        JobPosition position = new JobPosition();
+        position.setTitle("Senior Front-end");
+        jobPositionService.add(position);
+        return true;
+    }
 }
